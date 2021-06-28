@@ -4,10 +4,10 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SubCategory extends Model
+class ChildSubCategory extends Model
 {
     protected $fillable = [
-        'subCat_name', 'category_slug', 'image', 'cate_id'
+        'name', 'cate_id', 'subcate_id'
     ];
 
     public function category()
@@ -15,4 +15,8 @@ class SubCategory extends Model
         return $this->belongsTo('App\Model\Category','cate_id','id');
     }
 
+    public function subcategory()
+    {
+        return $this->belongsTo('App\Model\SubCategory','subcate_id','id');
+    }
 }

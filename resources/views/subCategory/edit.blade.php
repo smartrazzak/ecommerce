@@ -6,19 +6,20 @@
                     <div class="col-md-12">
 
                             <div class="card-header">
-                                <h3>Add SubCategory</h3>
+                                <h3>Update SubCategory</h3>
                             </div>
 
                        <div class="card-body">
 
-                            <form class="form-horizontal" role="form" action="{{ route('subcategory.store')}}" method="post" >
+                            <form class="form-horizontal" role="form" action="{{ route('subcategory.update', $subcategories->id)}}" method="post" >
                               @csrf
+                              @method('PUT')
                         
                                <div class="form-group">
                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">SubCategory Name </label>
 
                                     <div class="col-sm-9">
-                                        <input type="text" id="form-field-1-1" placeholder="Text Field" name="subCat_name" class="form-control" value="" />
+                                        <input type="text" id="form-field-1-1" placeholder="Text Field" name="subCat_name" class="form-control" value="{{ $subcategories->subCat_name}}" />
                                     </div>
                                 </div>
 
@@ -27,9 +28,9 @@
 
                                     <div class="col-sm-9">
 
-                                    <select class="form-select" aria-label="form-select-lg example"  name="cate_id">
+                                    <select class="form-select" aria-label="form-select-lg example" name="cate_id">
                                     <option selected>Select Category</option>
-                                    @foreach($categories as $category)
+                                    @foreach($subcategories as $category)
                                       <option value="{{ $category->id }}"> {{ $category->category_name}}</option>
                                     @endforeach
                                 </select>
@@ -39,6 +40,7 @@
                                 </div>
 
                                 <div class="form-group">  
+                                   
                                      <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">SubCategory Image </label>
                                         <div class="col-sm-9">
                                           <input class="form-control" type="file" id="formFile" name="image">

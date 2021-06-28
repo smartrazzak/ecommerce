@@ -2,14 +2,14 @@
 @section('content')
     <div class="container">
     
-    <div class="row">
-        <div class="col-sm-12">
-            <h1 class="display-3">Product</h1>  
-
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="display-3">Product List</h1>  
+              <hr/>
                     <table class="table table-striped">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">SL.</th>
                         <th scope="col">Product Name</th>
                         <th scope="col">Product Code</th>
                         <th scope="col">Price</th>
@@ -19,41 +19,31 @@
                         </tr>
                     </thead>
                     <tbody>
+                       @foreach( $product as $pro)
                         <tr>
-                        <th scope="row">1</th>
-                        <td>T-Shirt</td>
-                        <td>101</td>
-                        <td>150</td>
-                        <td>Cotton T-shirt</td>
-                        <td>tshirt.jpg</td>
-                        <td>
+                          <th scope="row">{{ $pro->id}}</th>
+                            <td>{{ $pro->product_name}}</td>
+                            <td>{{ $pro->product_code}}</td>
+                            <td>{{ $pro->price}}</td>
+                            <td>{{ $pro->details}}</td>
+                            <td> {{ $pro->image}} </td>
+                            <td>
 
-                        <a class="btn btn-info" href="#"> Show</a>
-                        <a class="btn btn-primary" href="#"> Edit</a>
-                        <a class="btn btn-danger" href="#"> Delete</a>
-                        
-                        
-                        </td>
+
+                                    <form action="{{ route('product.destroy', $pro->id)}}" method="post">
+                                                @csrf
+                                                 @method('DELETE')
+
+                                        <a href="{{ route('product.edit', $pro->id)}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                    </form>
+                            
+                            
+                             </td>
+                            </th>
 
                         </tr>
-
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>T-Shirt</td>
-                        <td>101</td>
-                        <td>150</td>
-                        <td>Cotton T-shirt</td>
-                        <td>tshirt.jpg</td>
-                        <td>
-
-                        <a class="btn btn-info" href="#"> Show</a>
-                        <a class="btn btn-primary" href="#"> Edit</a>
-                        <a class="btn btn-danger" href="#"> Delete</a>
-                        
-                        
-                        </td>
-
-                        </tr>
+                        @endforeach
                         
                     </tbody>
                     </table>

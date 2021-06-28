@@ -10,7 +10,6 @@
                             </div>
 
                     
-
                  <div class="card-body">
 
                             <form class="form-horizontal" role="form" action="{{ route('site-config.update', $contact->id)}}" method="post" >
@@ -75,8 +74,17 @@
                                          </div>
                                 </div>  
 
+
+                                <div class="form-group ">
+										<div class="col-md-12 text-right">
+											<button class="btn btn-info" type="button">Edit</button>
+
+
+										</div>
+									</div>
+
                                
-                                  <button type="submit" class="btn btn-primary align-right">Edit</button>
+                                  <!-- <button type="submit" class="btn btn-primary">Edit</button> -->
                               
 
                              
