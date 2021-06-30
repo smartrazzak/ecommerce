@@ -28,7 +28,7 @@ Route::get('/site-config', 'BackendController@index')->name('site-config.index')
 
 
 
- Route::get('/product', 'ProductController@index')->name('product.index');
+ /* Route::get('/product', 'ProductController@index')->name('product.index');
 
  Route::get('/product/create', 'ProductController@create')->name('product.create');
 
@@ -38,7 +38,7 @@ Route::get('/site-config', 'BackendController@index')->name('site-config.index')
 
  Route::put('/product/{id}', 'ProductController@update')->name('product.update');
 
- Route::delete('/product/{id}', 'ProductController@destroy')->name('product.destroy');
+ Route::delete('/product/{id}', 'ProductController@destroy')->name('product.destroy'); */
 
 
 
@@ -80,5 +80,14 @@ Route::get('/site-config', 'BackendController@index')->name('site-config.index')
   Route::patch('/childsubcategory/{id}', 'ChildSubCategoryController@update')->name('childsubcategory.update');
  
   Route::delete('/childsubcategory/{id}', 'ChildSubCategoryController@destroy')->name('childsubcategory.destroy');
+
+ //Sliders Route
+  Route::resource('sliders', 'SliderController');
+
+   //Brands Route
+  Route::resource('brands', 'BrandController');
+
+   //Product Route
+   Route::resource('products', 'ProductController');
 
 

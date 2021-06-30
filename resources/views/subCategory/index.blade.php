@@ -26,7 +26,7 @@
                                 <th scope="row">{{ $subcategory->id}}</th>
                                 <td>{{ $subcategory->subCat_name}}</td>
                                 <td> {{ $subcategory->category->category_name}} </td>
-                                <td> {{ $subcategory->image}}</td>
+                                <td> <img src="{{ asset('uploads/subcategory/'.$subcategory->image)}}" width ="50" height="50" /></td>
                                 <td>
                                    
                                    
@@ -34,7 +34,7 @@
                                         @csrf
                                         @method('DELETE')
 
-                                        <a href="{{ route('subcategory.edit', $subcategory->id)}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        <!-- <a href="{{ route('subcategory.edit', $subcategory->id)}}" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> -->
                                         <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                     </form>
 

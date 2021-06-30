@@ -6,54 +6,54 @@
                     <div class="col-md-12">
 
                             <div class="card-header">
-                                <h3>Add Product</h3>
+                                <h3>Edit Slider</h3>
                             </div>
                             <hr/>
                        <div class="card-body">
                       
 
-                            <form class="form-horizontal" role="form" action="{{ route('product.update', $product->id)}}" method="post" >
+                            <form class="form-horizontal" role="form" action="{{ route('sliders.update', $slider->id)}}" method="post" enctype="multipart/form-data" >
                               @csrf
                               @Method('PUT')
                         
-                               <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Product Name </label>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Slider Heading </label>
 
                                     <div class="col-sm-9">
-                                        <input type="text" id="form-field-1-1" placeholder="Product Name" name="product_name" class="form-control" value="{{ $product->product_name}}" />
+                                        <input type="text" id="form-field-1-1" name="heading" class="form-control" value="{{ $slider->heading}}" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Product Code</label>
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Slider Description</label>
 
                                     <div class="col-sm-9">
-                                        <input type="tel" id="form-field-1-1" placeholder="Product Code" name="product_code" class="form-control" value="{{ $product->product_code}}" />
+                                        <input type="text" id="form-field-1-1" name="description" class="form-control" value="{{ $slider->description}}" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Product Price</label>
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Slider Link</label>
 
                                     <div class="col-sm-9">
-                                        <input type="tel" id="form-field-1-1" placeholder="Product Price" name="price" class="form-control" value="{{ $product->price}}" />
+                                        <input type="text" id="form-field-1-1" placeholder="Link" name="link" class="form-control" value="" />
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Product Details</label>
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Slider Link Name</label>
 
                                     <div class="col-sm-9">
-                                        <textarea class="form-control" id="form-field-8" name="details">{{ $product->details}}</textarea>
+                                    <input type="text" id="form-field-1-1" placeholder="Link Name" name="link_name" class="form-control" value="" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">  
                                    
-                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Product Image </label>
+                                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Slider Image </label>
                                         <div class="col-sm-9">
-                                          <input class="form-control" type="file" id="formFile" name="image" value="{{ $product->image}}">
+                                          <input class="form-control" type="file" id="formFile" name="image" value="{{ $slider->image}}">
                                         </div>
                                 </div>  
 

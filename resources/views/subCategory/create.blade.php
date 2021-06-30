@@ -11,7 +11,7 @@
 
                        <div class="card-body">
 
-                            <form class="form-horizontal" role="form" action="{{ route('subcategory.store')}}" method="post" >
+                            <form class="form-horizontal" role="form" action="{{ route('subcategory.store')}}" method="post" enctype="multipart/form-data" >
                               @csrf
                         
                                <div class="form-group">

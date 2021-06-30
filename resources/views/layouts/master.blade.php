@@ -413,7 +413,7 @@
 						<b class="arrow"></b>
 					</li>
 
-					<li class="">
+<!-- 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
@@ -733,10 +733,81 @@
 
 						<b class="arrow"></b>
 					</li>
+ -->
+
+ 					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<!-- <i class="menu-icon fa fa-tag"></i> -->
+							<i class="fa fa-sliders" aria-hidden="true"></i>
+							<span class="menu-text"> Brand </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="{{ route('brands.create') }}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add Brand
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="{{ route('brands.index') }}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Brand
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							
+						</ul>
+					</li>
+
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
+							<!-- <i class="menu-icon fa fa-tag"></i> -->
+							<i class="fa fa-sliders" aria-hidden="true"></i>
+							<span class="menu-text"> Slider </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="{{ route('sliders.create') }}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add Slider
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="{{ route('sliders.index') }}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									All Slider
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<!-- <i class="menu-icon fa fa-tag"></i> -->
+							<i class="fa fa-list-alt" aria-hidden="true"></i>
 							<span class="menu-text"> Category </span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -769,7 +840,8 @@
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
+							<!-- <i class="menu-icon fa fa-tag"></i> -->
+							<i class="fa fa-list-alt" aria-hidden="true"></i>
 							<span class="menu-text"> SubCategory </span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -803,7 +875,8 @@
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
+							<!-- <i class="menu-icon fa fa-tag"></i> -->
+							<i class="fa fa-list-alt" aria-hidden="true"></i>
 							<span class="menu-text"> Child SubCategory </span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -836,7 +909,8 @@
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
+							<!-- <i class="menu-icon fa fa-tag"></i> -->
+							<i class="fa fa-product-hunt" aria-hidden="true"></i>
 							<span class="menu-text"> Product </span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -846,7 +920,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="{{ route('product.create') }}">
+								<a href="{{ route('products.create') }}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Add Product
 								</a>
@@ -855,7 +929,7 @@
 							</li>
 
 							<li class="">
-								<a href="{{ URL::to('product') }}">
+								<a href="{{ route('products.index') }}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									All Product
 								</a>
@@ -867,6 +941,8 @@
 						</ul>
 					</li>
 
+					
+ 
 					<li class="">
 						<a href="{{url('site-config')}}">
 							<i class="ace-icon fa fa-cog bigger-130 "></i>

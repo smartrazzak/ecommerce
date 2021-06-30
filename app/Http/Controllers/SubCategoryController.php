@@ -26,16 +26,24 @@ class SubCategoryController extends Controller
 
    public function store(Request $request)
    {
-    
-       $request->validate([
-          'subCat_name'=> 'required',
-          'cate_id'=> 'required', 
-          'image' => 'required'
-       ]);
 
-       /* return $request->all();  */
 
-       SubCategory::create($request->all());
+       $catsub = new SubCategory;
+       $catsub->subCat_name = $request->input('subCat_name');
+       $catsub->cate_id = $request->input('cate_id');
+       $catsub->image = $request->input('image');
+
+       if($request->hasfile('image'))
+       {
+         $file = $request->file('image');
+         $extention = $file->getClientOriginalExtension();
+         $filename = time().'.'.$extention;
+         $file->move('uploads/subcategory/', $filename);
+         $catsub->image = $filename;
+       }
+
+       $catsub->save();
+
        return redirect()->route('subCategory.index')->with('success','subcategory created successfully.');      
    }
    
