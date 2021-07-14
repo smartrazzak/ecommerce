@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-// Route::get('/', function () {
-//     return view('layouts.master');
-// });
+
+ Route::get('/ecom', function () {
+    return view('frontend.layouts.home');
+});
+
 
 Route::get('/site-config', 'BackendController@index')->name('site-config.index');
 
