@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Siteconfig;
 use Illuminate\Support\ServiceProvider;
 
 use Illuminate\Support\Facades\Schema;

@@ -2,8 +2,16 @@
                     <div class="header-nav-combined">
                         <div class="header__top">
                             <div class="ps-container">
+                            
+                            
+                            @php
+                                $siteInfo = \App\Model\Siteconfig::first();
+                               
+                            @endphp
+                            
                                 <div class="header__left" style="flex: 1 1 0%;">
-                                    <a class="ps-logo" href="/"><img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=logo/mascobazar.png" alt="Masco Bazar" style="height: auto; width: 130px; padding: 13px;" /></a>
+                                
+                                    <a class="ps-logo" href="{{url('/')}}"><img src="{{asset('uploads/siteConfig/'.$siteInfo->logo)}}" alt="Masco Bazar" style="height: auto; width: 130px; padding: 13px;" /></a>
                                     <div class="Toastify"></div>
                                 </div>
                                 <div class="header__center" style="padding-bottom: 8px; flex: 2 1 0%;">
@@ -23,12 +31,12 @@
                                 <div class="header__right" style="flex: 1 1 0%;">
                                     <div class="header__actions">
                                         <a class="header__extra" href="/account/wishlist">
-                                            <i><img src="static/img/HomeIcon/wish.png" alt="Wishlist" /></i><span><i>0</i></span>
+                                            <i><img src="{{asset('frontend/static/img/HomeIcon/wish.png')}}" alt="Wishlist" /></i><span><i>0</i></span>
                                         </a>
                                         <div>
                                             <div class="ps-cart--mini" id="cart_mini">
                                                 <a class="header__extra" href="#">
-                                                    <i class=""><img src="static/img/HomeIcon/cart.png" alt="mascobazar" /></i><span><i>0</i></span>
+                                                    <i class=""><img src="{{asset('frontend/static/img/HomeIcon/cart.png')}}" alt="mascobazar" /></i><span><i>0</i></span>
                                                 </a>
                                                 <div class="ps-cart__content">
                                                     <div class="ps-cart__items"><span>No products in cart</span></div>
@@ -38,7 +46,7 @@
                                                 <div id="center-sticky-cart">
                                                     <span class="itemOne">1</span><span class="remove_qty">1</span>
                                                     <div class="itemCount">
-                                                        <img src="static/img/shopping-bag-center.png" alt="bag" style="height: 65%; width: 100%; object-fit: contain;" />
+                                                        <img src="{{asset('frontend/static/img/shopping-bag-center.png')}}" alt="bag" style="height: 65%; width: 100%; object-fit: contain;" />
                                                         <div id="itemCount">
                                                             <strong> <span id="qty_num">0 </span>Items</strong>
                                                         </div>
@@ -50,7 +58,7 @@
                                             </div>
                                         </div>
                                         <div class="ps-block--user-header">
-                                            <div class="ps-block__left"><img src="static/img/HomeIcon/user-none.png" alt="User" style="height: 70%; width: 100%; object-fit: contain;" /></div>
+                                            <div class="ps-block__left"><img src="{{asset('frontend/static/img/HomeIcon/user-none.png')}}" alt="User" style="height: 70%; width: 100%; object-fit: contain;" /></div>
                                             <div class="ps-block__right mt-auto" style="text-align: center;"><a href="/account/login">Login</a><a href="/account/register" style="color: rgb(36, 159, 72);">Register</a></div>
                                         </div>
                                     </div>
@@ -151,7 +159,7 @@
                                 <div>
                                     <div class="ps-cart--mini" id="cart_mini">
                                         <a class="header__extra" href="#">
-                                            <i class=""><img src="static/img/HomeIcon/cart.png" alt="mascobazar" /></i><span><i>0</i></span>
+                                            <i class=""><img src="{{asset('frontend/static/img/HomeIcon/cart.png')}}" alt="mascobazar" /></i><span><i>0</i></span>
                                         </a>
                                         <div class="ps-cart__content">
                                             <div class="ps-cart__items"><span>No products in cart</span></div>
@@ -161,7 +169,7 @@
                                         <div id="center-sticky-cart">
                                             <span class="itemOne">1</span><span class="remove_qty">1</span>
                                             <div class="itemCount">
-                                                <img src="static/img/shopping-bag-center.png" alt="bag" style="height: 65%; width: 100%; object-fit: contain;" />
+                                                <img src="{{asset('frontend/static/img/shopping-bag-center.png')}}" alt="bag" style="height: 65%; width: 100%; object-fit: contain;" />
                                                 <div id="itemCount">
                                                     <strong> <span id="qty_num">0 </span>Items</strong>
                                                 </div>
@@ -173,7 +181,7 @@
                                     </div>
                                 </div>
                                 <div class="ps-block--user-header">
-                                    <div class="ps-block__left"><img src="static/img/HomeIcon/user-none.png" alt="User" style="height: 70%; width: 100%; object-fit: contain;" /></div>
+                                    <div class="ps-block__left"><img src="{{asset('frontend/static/img/HomeIcon/user-none.png')}}" alt="User" style="height: 70%; width: 100%; object-fit: contain;" /></div>
                                     <div class="ps-block__right mt-auto" style="text-align: center;"><a href="/account/login">Login</a><a href="/account/register" style="color: rgb(36, 159, 72);">Register</a></div>
                                 </div>
                             </div>
@@ -182,7 +190,7 @@
                     <div class="ps-search--mobile">
                         <div class="ps-form--search-mobile">
                             <div class="form-group--nest">
-                                <input class="form-control" type="text" placeholder="I'm shopping for..." /><button><img src="static/img/search_icon.png" alt="martfury" /></button>
+                                <input class="form-control" type="text" placeholder="I'm shopping for..." /><button><img src="{{asset('frontend/static/img/search_icon.png')}}" alt="martfury" /></button>
                             </div>
                         </div>
                     </div>

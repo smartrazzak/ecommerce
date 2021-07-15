@@ -1,5 +1,6 @@
 <?php
 
+use App\Siteconfig;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,14 +19,20 @@ Route::get('/', function () {
 });
 
  Route::get('/ecom', function () {
+
     return view('frontend.layouts.home');
 });
 
+Route::get('/about', function () {
 
-Route::get('/site-config', 'BackendController@index')->name('site-config.index');
+    return view('frontend.layouts.about');
+});
 
- Route::get('/site-config/{id}', 'BackendController@edit');
- Route::post('/site-config/{id}', 'BackendController@update')->name('site-config.update');
+
+Route::get('/site-config', 'SiteController@index')->name('site-config.index');
+
+ Route::get('/site-config/{id}', 'SiteController@edit');
+ Route::post('/site-config/{id}', 'SiteController@update')->name('site-config.update');
 
 
 

@@ -12,7 +12,7 @@
                     
                  <div class="card-body">
 
-                            <form class="form-horizontal" role="form" action="{{ route('site-config.update', $contact->id)}}" method="post" >
+                            <form class="form-horizontal" role="form" action="{{ route('site-config.update', $contact->id)}}" method="post" enctype="multipart/form-data">
                               @csrf
                         
                       
@@ -62,7 +62,7 @@
                                    
                                      <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Logo </label>
                                         <div class="col-sm-9">
-                                          <input class="form-control" type="file" id="formFile">
+                                          <input class="form-control" type="file" name="logo" id="formFile">
                                         </div>
                                 </div>  
 
@@ -70,14 +70,14 @@
                                    
                                      <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1">Ficon </label>
                                         <div class="col-sm-9">
-                                          <input class="form-control" type="file" id="formFile">
+                                          <input class="form-control" type="file" name="ficon_logo"  id="formFile">
                                          </div>
                                 </div>  
 
 
                                 <div class="form-group ">
 										<div class="col-md-12 text-right">
-											<button class="btn btn-info" type="button">Edit</button>
+											<button class="btn btn-info" type="submit">Update</button>
 
 
 										</div>

@@ -916,7 +916,7 @@
                                         <div class="view_btn">
                                             <span style="width: 100px; background-color: rgb(228, 228, 228); margin-right: 15px;"></span>
                                             <a href="/most-popular-products" style="color: rgb(35, 170, 74); margin-right: 10px; font-weight: bold; font-size: 1.4em; font-family: Roboto, Arial, sans-serif;">View All</a>
-                                            <img height="20px" src="static/img/category-right-arrow.png" />
+                                            <img height="20px" src="{{asset('frontend/static/img/category-right-arrow.png')}}" />
                                         </div>
                                     </div>
                                     <div class="ps-section__content">
@@ -1395,7 +1395,7 @@
                                         <div class="view_btn">
                                             <span style="width: 100px; background-color: rgb(228, 228, 228); margin-right: 15px;"></span>
                                             <a href="/deal-of-the-day" style="color: rgb(35, 170, 74); margin-right: 10px; font-weight: bold; font-size: 1.4em; font-family: Roboto, Arial, sans-serif;">View All</a>
-                                            <img height="20px" src="static/img/category-right-arrow.png" />
+                                            <img height="20px" src="{{asset('frontend/static/img/category-right-arrow.png')}}" />
                                         </div>
                                     </div>
                                     <div class="ps-section__content">
@@ -1880,7 +1880,7 @@
                                         <div class="view_btn">
                                             <span style="width: 100px; background-color: rgb(228, 228, 228); margin-right: 15px;"></span>
                                             <a href="/most-discounted" style="color: rgb(35, 170, 74); margin-right: 10px; font-weight: bold; font-size: 1.4em; font-family: Roboto, Arial, sans-serif;">View All</a>
-                                            <img height="20px" src="static/img/category-right-arrow.png" />
+                                            <img height="20px" src="{{asset('frontend/static/img/category-right-arrow.png')}}" />
                                         </div>
                                     </div>
                                     <div class="ps-section__content">
@@ -2363,7 +2363,7 @@
                                         <div class="view_btn">
                                             <span style="width: 100px; background-color: rgb(228, 228, 228); margin-right: 15px;"></span>
                                             <a href="/new-arrival" style="color: rgb(35, 170, 74); margin-right: 10px; font-weight: bold; font-size: 1.4em; font-family: Roboto, Arial, sans-serif;">View All</a>
-                                            <img height="20px" src="static/img/category-right-arrow.png" />
+                                            <img height="20px" src="{{asset('frontend/static/img/category-right-arrow.png')}}" />
                                         </div>
                                     </div>
                                     <div class="ps-section__content">
@@ -2838,7 +2838,7 @@
                                         <div class="view_btn">
                                             <span style="width: 100px; background-color: rgb(228, 228, 228); margin-right: 15px;"></span>
                                             <a href="/masco-bazar-products" style="color: rgb(35, 170, 74); margin-right: 10px; font-weight: bold; font-size: 1.4em; font-family: Roboto, Arial, sans-serif;">View All</a>
-                                            <img height="20px" src="static/img/category-right-arrow.png" />
+                                            <img height="20px" src="{{asset('frontend/static/img/category-right-arrow.png')}}" />
                                         </div>
                                     </div>
                                     <div class="ps-section__content">
