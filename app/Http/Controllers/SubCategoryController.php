@@ -12,7 +12,7 @@ class SubCategoryController extends Controller
     public function index()
    {
        
-    $data['categories'] = Category::get();
+    // $data['categories'] = Category::with('subCategories')->get();
     $data['subcategories'] = SubCategory::with('category')->get();
 
     return view('subCategory.index', $data);

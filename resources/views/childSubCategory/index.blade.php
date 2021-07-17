@@ -6,7 +6,7 @@
                     <div class="col-md-12">
 
                             <div class="card-header">
-                                <h3>SubCategory Lists</h3>
+                                <h3>Child SubCategory Lists</h3>
                             </div>
                         <hr>
                        <div class="card-body">

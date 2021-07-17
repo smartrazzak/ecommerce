@@ -11,7 +11,7 @@ class CategoryController extends Controller
 
     public function index()
     {
-        $data = Category::get();
+       $data = Category::get();
          return view('category.index',compact('data')); 
     }
     
@@ -28,14 +28,22 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {           
-         $request->validate([
-            'category_name' => 'required',
-            'position' => 'required',
-            'image' => 'required'
-            
-        ]);
+       
+        $categories = new Category;
+        $categories->category_name = $request->input('category_name');
+        $categories->position = $request->input('position');
+        if($request->hasfile('image'))
+        {
+          $file = $request->file('image');
+          $extention = $file->getClientOriginalExtension();
+          $filename = time().'.'.$extention;
+          $file->move('uploads/category/', $filename);
+          $categories->image = $filename;
+        }
+       
+        $categories->save();
 
-        Category::create($request->all()); 
+      /*   Category::create($request->all());  */
         return redirect()->route('category.index')->with('success', 'Category created successfully.'); 
     }
 

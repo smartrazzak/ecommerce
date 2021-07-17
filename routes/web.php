@@ -14,19 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Frontend Route
 
- Route::get('/ecom', function () {
+Route::get('/','FrontendController@index');
 
-    return view('frontend.layouts.home');
-});
+Route::get('/about','FrontendController@about');
+Route::get('/category','FrontendController@category');
 
-Route::get('/about', function () {
+Route::get('/single-product','FrontendController@singleProduct');
 
-    return view('frontend.layouts.about');
-});
+Route::get('/checkout','FrontendController@checkout');
+
+Route::get('/cart','FrontendController@cart');
+
+// Admin Route
+
+Route::get('/admin','AdminController@index');
+
+ 
+
 
 
 Route::get('/site-config', 'SiteController@index')->name('site-config.index');
@@ -52,17 +58,24 @@ Route::get('/site-config', 'SiteController@index')->name('site-config.index');
 
 
 //Category Route
- Route::get('/category', 'CategoryController@index')->name('category.index');
+Route::prefix('admin')->group(function()
+{
+    Route::get('/category', 'CategoryController@index')->name('category.index');
 
- Route::get('/category/create', 'CategoryController@create')->name('category.create');
+    Route::get('/category/create', 'CategoryController@create')->name('category.create');
 
- Route::post('/category', 'CategoryController@store')->name('category.store');
+    Route::post('/category', 'CategoryController@store')->name('category.store');
 
- Route::get('/category/{id}/edit', 'CategoryController@edit')->name('category.edit');
+    Route::get('/category/{id}/edit', 'CategoryController@edit')->name('category.edit');
 
- Route::put('/category/{id}/', 'CategoryController@update')->name('category.update');
+    Route::put('/category/{id}/', 'CategoryController@update')->name('category.update');
 
- Route::delete('/category/{id}/', 'CategoryController@destroy')->name('category.destroy');
+    Route::delete('/category/{id}/', 'CategoryController@destroy')->name('category.destroy');
+});
+
+ 
+
+ 
 
 
  //SubCategory Route

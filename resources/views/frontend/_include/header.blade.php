@@ -71,45 +71,14 @@
                                             <div class="menu__toggle"><i class="icon-menu"></i><span> Shop by Department</span></div>
                                             <div class="menu__content">
                                                 <ul class="menu--dropdown">
-                                                    <li>
-                                                        <a href="/mascobazar-online-grocery-shop-in-dhaka/Food-Groceries">
-                                                            <img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/food-groceries.png" alt="Food &amp; Groceries" style="width: 25px; padding: 2px;" />Food
-                                                            &amp; Groceries
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/mascobazar-online-grocery-shop-in-dhaka/House-hold">
-                                                            <img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/household.png" alt="Household" style="width: 25px; padding: 2px;" />Household
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/mascobazar-online-grocery-shop-in-dhaka/Health-Beauty-Care">
-                                                            <img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/health-beauty-care.png" alt="Health &amp; Beauty Care" style="width: 25px; padding: 2px;" />
-                                                            Health &amp; Beauty Care
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/mascobazar-online-grocery-shop-in-dhaka/Infant-Children">
-                                                            <img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/Infant-children.png" alt="Infant &amp; Children" style="width: 25px; padding: 2px;" />Infant
-                                                            &amp; Children
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/mascobazar-online-grocery-shop-in-dhaka/Stationeries-Education">
-                                                            <img
-                                                                src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/stationeries-education.png"
-                                                                alt="Stationeries &amp; Education"
-                                                                style="width: 25px; padding: 2px;"
-                                                            />
-                                                            Stationeries &amp; Education
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/mascobazar-online-grocery-shop-in-dhaka/Automobile-Necessity">
-                                                            <img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/automobile-necessity.png" alt="Automobile Necessity" style="width: 25px; padding: 2px;" />
-                                                            Automobile Necessity
-                                                        </a>
-                                                    </li>
+                                                    @foreach( $categories as $category) 
+                                                        <li>
+                                                            <a href="/mascobazar-online-grocery-shop-in-dhaka/Food-Groceries">
+                                                                <img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/food-groceries.png" alt="Food &amp; Groceries" style="width: 25px; padding: 2px;" />
+                                                                {{ $category->category_name}}
+                                                            </a>
+                                                        </li>
+                                                    @endforeach 
                                                 </ul>
                                             </div>
                                         </div>
