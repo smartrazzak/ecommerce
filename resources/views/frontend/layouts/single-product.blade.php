@@ -100,9 +100,9 @@
                                                     </figure>
                                                 </div>
                                                 <div class="action-div-default-functionality">
-                                                    <div><button class="ps-btn add-cart">ADD TO CART</button></div>
-                                                    <div><button class="ps-btn buy-now">CONTINUE SHOPPING</button></div>
-                                                    <div><button class="ps-btn buy-now">CHECKOUT</button></div>
+                                                    <div> <a href="{{url('/account/cart')}}"><button class="ps-btn add-cart">ADD TO CART</button> </a></div>
+                                                    <div> <a href="{{url('/')}}"> <button class="ps-btn buy-now">CONTINUE SHOPPING</button> </a></div>
+                                                    <div> <a href="{{url('/account/checkout')}}"> <button class="ps-btn buy-now">CHECKOUT</button> </a> </div>
                                                     <div class="ps-product__actions">
                                                         <a href="#">
                                                             <i><img src="{{asset('frontend/static/img/HomeIcon/wish.png')}}" alt="Soudapati" /></i>

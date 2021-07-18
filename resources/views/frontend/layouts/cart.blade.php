@@ -95,7 +95,7 @@
 													</div>
 												</div>
 											</div>
-											<a class="ps-btn ps-btn--fullwidth btn-cart-proceed py-3" href="/account/checkout">Proceed to checkout</a>
+											<a class="ps-btn ps-btn--fullwidth btn-cart-proceed py-3" href="{{url('/')}}">Proceed to checkout</a>
 										</div>
 									</div>
 								</div>

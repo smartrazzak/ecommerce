@@ -21,11 +21,18 @@ Route::get('/','FrontendController@index');
 Route::get('/about','FrontendController@about');
 Route::get('/category','FrontendController@category');
 
+Route::get('/category/{id}','FrontendController@allCategory');
+
 Route::get('/single-product','FrontendController@singleProduct');
 
+Route::get('/single-product/{id}','FrontendController@single_Product');
+
 Route::get('/checkout','FrontendController@checkout');
+Route::get('/account/checkout','FrontendController@allCheckout');
 
 Route::get('/cart','FrontendController@cart');
+
+Route::get('/account/cart','FrontendController@accountCart');
 
 // Admin Route
 
@@ -113,3 +120,7 @@ Route::prefix('admin')->group(function()
    Route::resource('products', 'ProductController');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
