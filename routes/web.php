@@ -21,6 +21,7 @@ Route::get('/','FrontendController@index');
 Route::get('/about','FrontendController@about');
 Route::get('/category','FrontendController@category');
 
+
 Route::get('/category/{id}','FrontendController@allCategory');
 
 Route::get('/single-product','FrontendController@singleProduct');

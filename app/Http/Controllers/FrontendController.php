@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Brand;
 use App\Model\Product;
 use App\Model\Category;
 use App\Model\SubCategory;
@@ -30,14 +31,31 @@ class FrontendController extends Controller
     public function category()
     {
         return view('frontend.layouts.category');
-
     }
+
      public function allCategory()
     {
+        $data['allbrand'] = Brand::get();
+
         $data['categories'] = Category::with('subCategories')->get();
+        $data['subcategories'] = SubCategory::with('category')->get();
+
+        $data['childSubCategories'] = ChildSubCategory::with('subcategory', 'category')->get();
+
+        // $data['categories'] = Category::get();
+        // $data['subcategories'] = SubCategory::with('category')->get();
+
         return view('frontend.layouts.category', $data);
 
     }
+
+//    public function allBrand_subCategory()
+//     {
+//         
+//         $data['categories'] = Category::with('subCategories')->get();
+//         return view('frontend.layouts.category', $data);
+
+//     }
 
     public function single_Product()
     {
@@ -58,8 +76,8 @@ class FrontendController extends Controller
         $data['products'] = Product::get();
         $data['categories'] = Category::with('subCategories')->get();
         return view('frontend.layouts.checkout', $data);
-
     }
+
      public function cart()
     {
         return view('frontend.layouts.cart');

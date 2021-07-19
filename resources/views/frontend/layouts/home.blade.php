@@ -37,7 +37,7 @@
 
                             <div class="ps-section__left col-md-3">
                                 <ul id="home-banner-dept" class="home-banner-dept">
-                            @foreach( $categories as $category)
+                                  @foreach( $categories as $category)
                                     <li>
                                         <a href="{{url('/category/'.$category->id) }}"> 
                                             <img src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=0&amp;imgPath=dept_icon/food-groceries.png" alt="Food &amp; Groceries" /> {{ $category->category_name}} <i class="fa fa-angle-right"></i>
@@ -74,6 +74,7 @@
 
                                 </ul>
                             </div>
+
                             <div class="ml-3 ps-section__middle col-md-6">
                                 <div class="slick-slider ps-carousel slick-initialized" dir="ltr">
                                     <button class="slick-arrow slick-prev slick-arrow slick-prev"><i class="icon-chevron-left"></i></button>
@@ -284,7 +285,7 @@
                                             <div class="slick-list">
                                                 <div class="slick-track" style="width: 1530px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
 
-@foreach($products as $product) 
+                                                 @foreach($products as $product) 
                                                     <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 306px;">
                                                         
                                                         <div>
@@ -390,8 +391,6 @@
                                                     </div>
                                                     @endforeach 
                                                     
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -399,9 +398,248 @@
                                 </div>
                             </div>
 
+
+                    <!-- Start Deals of the day-->
+                    <div class="ps-deal-of-day">
+                        <div class="ps-container">
+                            <div class="ps-section__header">
+                                <div class="ps-block--countdown-deal">
+                                    <div class="ps-block__left large"><p style="margin-bottom: 0px; color: rgb(53, 53, 53); font-weight: bold; font-size: 1.6em; font-family: Roboto, Arial, sans-serif;">Deals of the Day</p></div>
+                                    <div class="ps-block__left small"><p>Deals of the Day</p></div>
+                                </div>
+                                <div class="view_btn">
+                                    <span style="width: 100px; background-color: rgb(228, 228, 228); margin-right: 15px;"></span>
+                                    <a href="/deal-of-the-day" style="color: rgb(35, 170, 74); margin-right: 10px; font-weight: bold; font-size: 1.4em; font-family: Roboto, Arial, sans-serif;">View All</a>
+                                    <img height="20px" src="{{asset('frontend/static/img/category-right-arrow.png')}}" />
+                                </div>
+                            </div>
+                            <div class="ps-section__content">
+                                <div class="slick-slider ps-carousel outside slick-initialized">
+                                    <div class="slick-list">
+                                        <div class="slick-track" style="width: 1530px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                        
+                                            <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 306px;">
+                                                <div>
+                                                    <div class="ps-product ps-product--inner">
+                                                        <div class="ps-porduct__card_header">
+                                                            <div class="left-side">
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                            </div>
+                                                            <div class="right-side">
+                                                                <div></div>
+                                                                <div class="discount">25.2% Discount</div>
+                                                                <div class="discount_amount">- ৳155</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ps-product__thumbnail">
+                                                            <div class="ps-product__actions_vertically" style="display: flex; flex-direction: column;">
+                                                                <div class="ml-auto mr-auto rs-content-fav" style="padding-top: 10px; flex: 1 1 0%;">
+                                                                    <button
+                                                                        style="
+                                                                            background-image: url('/static/img/wish-list.png');
+                                                                            background-repeat: no-repeat;
+                                                                            border: none;
+                                                                            align-content: center;
+                                                                            height: 20px;
+                                                                            width: 20px;
+                                                                            background-position: center center;
+                                                                            background-color: transparent;
+                                                                        "
+                                                                    ></button>
+                                                                </div>
+                                                                <div class="ml-auto mr-auto rs-content-view" style="flex: 1 1 0%;">
+                                                                    <button
+                                                                        style="
+                                                                            background-image: url('/static/img/view.png');
+                                                                            background-repeat: no-repeat;
+                                                                            border: none;
+                                                                            align-content: center;
+                                                                            height: 20px;
+                                                                            width: 20px;
+                                                                            background-position: center center;
+                                                                            background-color: transparent;
+                                                                        "
+                                                                    ></button>
+                                                                </div>
+                                                            </div>
+                                                            <a>
+                                                                <picture>
+                                                                    <source
+                                                                        media="(min-width: 650px)"
+                                                                        srcset="
+                                                                            https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=1&amp;imgPath=head_display/2756_%5BBaby%20Care%5D%5Cdisplay_image%5C4245_%5BLion%20Breast%20Pump%20Set%20%281%20Set%20Box%29%5D%5C5%5Ccover_image%5C1_Lion-Breast-Pump-Set-%281-Set-Box%29.webp
+                                                                        "
+                                                                    />
+                                                                    <source
+                                                                        media="(min-width: 465px)"
+                                                                        srcset="
+                                                                            https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=1&amp;imgPath=head_display/2756_%5BBaby%20Care%5D%5Cdisplay_image%5C4245_%5BLion%20Breast%20Pump%20Set%20%281%20Set%20Box%29%5D%5C5%5Ccover_image%5C1_Lion-Breast-Pump-Set-%281-Set-Box%29.webp
+                                                                        "
+                                                                    />
+                                                                    <img
+                                                                        src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=1&amp;imgPath=head_display/2756_%5BBaby%20Care%5D%5Cdisplay_image%5C4245_%5BLion%20Breast%20Pump%20Set%20%281%20Set%20Box%29%5D%5C5%5Ccover_image%5C1_Lion-Breast-Pump-Set-%281-Set-Box%29.webp"
+                                                                        alt="Lion Breast Pump Set (1 Set Box)(5279-33) "
+                                                                        style="display: block; margin: auto;"
+                                                                    />
+                                                                </picture>
+                                                            </a>
+                                                            <span class="ps-product__actions"><a data-toggle="tooltip" data-placement="top" title="View Details">View Details</a></span>
+                                                        </div>
+                                                        <div class="ps-product__container">
+                                                            <div class="ps-product__content">
+                                                                <a class="ps-product__title" href="/product/4245">Lion Breast Pump Set (1 Set Box)(5279-33) </a>
+                                                                <div class="ps-product__quantity"><p class="quantity_text">n/a</p></div>
+                                                                <div class="ps-product__price sale">
+                                                                    <strong>৳</strong> 460<del class="ml-2"><strong>৳</strong> 615</del>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="ps-porduct__add-cart"><p class="add-cart-text">ADD TO BAG</p></div>
+                                                                <div class="ps-porduct__add-cart__Hover">
+                                                                    <figure>
+                                                                        <div class="add-cart-inc-dec">
+                                                                            <button class="up"><i class="fa fa-plus btn-clr"></i></button><button class="down"><i class="fa fa-minus btn-clr"></i></button>
+                                                                            <input class="display_quantity" type="text" placeholder="0 ITEM COUNT" disabled="" />
+                                                                        </div>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                         
+                    <!-- End Deals of the day-->
                            
                            
-                            
+                    <!-- Start Most Discounted Products-->
+                    <div class="ps-deal-of-day">
+                        <div class="ps-container">
+                            <div class="ps-section__header">
+                                <div class="ps-block--countdown-deal">
+                                    <div class="ps-block__left large"><p style="margin-bottom: 0px; color: rgb(53, 53, 53); font-weight: bold; font-size: 1.6em; font-family: Roboto, Arial, sans-serif;">Most Discounted Products </p></div>
+                                    <div class="ps-block__left small"><p>Most Discounted Products</p></div>
+                                </div>
+                                <div class="view_btn">
+                                    <span style="width: 100px; background-color: rgb(228, 228, 228); margin-right: 15px;"></span>
+                                    <a href="/deal-of-the-day" style="color: rgb(35, 170, 74); margin-right: 10px; font-weight: bold; font-size: 1.4em; font-family: Roboto, Arial, sans-serif;">View All</a>
+                                    <img height="20px" src="{{asset('frontend/static/img/category-right-arrow.png')}}" />
+                                </div>
+                            </div>
+                            <div class="ps-section__content">
+                                <div class="slick-slider ps-carousel outside slick-initialized">
+                                    <div class="slick-list">
+                                        <div class="slick-track" style="width: 1530px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                        
+                                            <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 306px;">
+                                                <div>
+                                                    <div class="ps-product ps-product--inner">
+                                                        <div class="ps-porduct__card_header">
+                                                            <div class="left-side">
+                                                                <div></div>
+                                                                <div></div>
+                                                                <div></div>
+                                                            </div>
+                                                            <div class="right-side">
+                                                                <div></div>
+                                                                <div class="discount">25.2% Discount</div>
+                                                                <div class="discount_amount">- ৳155</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ps-product__thumbnail">
+                                                            <div class="ps-product__actions_vertically" style="display: flex; flex-direction: column;">
+                                                                <div class="ml-auto mr-auto rs-content-fav" style="padding-top: 10px; flex: 1 1 0%;">
+                                                                    <button
+                                                                        style="
+                                                                            background-image: url('/static/img/wish-list.png');
+                                                                            background-repeat: no-repeat;
+                                                                            border: none;
+                                                                            align-content: center;
+                                                                            height: 20px;
+                                                                            width: 20px;
+                                                                            background-position: center center;
+                                                                            background-color: transparent;
+                                                                        "
+                                                                    ></button>
+                                                                </div>
+                                                                <div class="ml-auto mr-auto rs-content-view" style="flex: 1 1 0%;">
+                                                                    <button
+                                                                        style="
+                                                                            background-image: url('/static/img/view.png');
+                                                                            background-repeat: no-repeat;
+                                                                            border: none;
+                                                                            align-content: center;
+                                                                            height: 20px;
+                                                                            width: 20px;
+                                                                            background-position: center center;
+                                                                            background-color: transparent;
+                                                                        "
+                                                                    ></button>
+                                                                </div>
+                                                            </div>
+                                                            <a>
+                                                                <picture>
+                                                                    <source
+                                                                        media="(min-width: 650px)"
+                                                                        srcset="
+                                                                            https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=1&amp;imgPath=head_display/2756_%5BBaby%20Care%5D%5Cdisplay_image%5C4245_%5BLion%20Breast%20Pump%20Set%20%281%20Set%20Box%29%5D%5C5%5Ccover_image%5C1_Lion-Breast-Pump-Set-%281-Set-Box%29.webp
+                                                                        "
+                                                                    />
+                                                                    <source
+                                                                        media="(min-width: 465px)"
+                                                                        srcset="
+                                                                            https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=1&amp;imgPath=head_display/2756_%5BBaby%20Care%5D%5Cdisplay_image%5C4245_%5BLion%20Breast%20Pump%20Set%20%281%20Set%20Box%29%5D%5C5%5Ccover_image%5C1_Lion-Breast-Pump-Set-%281-Set-Box%29.webp
+                                                                        "
+                                                                    />
+                                                                    <img
+                                                                        src="https://cdn.mascobazar.com/api/v1/ImgProcessing?webp=1&amp;imgPath=head_display/2756_%5BBaby%20Care%5D%5Cdisplay_image%5C4245_%5BLion%20Breast%20Pump%20Set%20%281%20Set%20Box%29%5D%5C5%5Ccover_image%5C1_Lion-Breast-Pump-Set-%281-Set-Box%29.webp"
+                                                                        alt="Lion Breast Pump Set (1 Set Box)(5279-33) "
+                                                                        style="display: block; margin: auto;"
+                                                                    />
+                                                                </picture>
+                                                            </a>
+                                                            <span class="ps-product__actions"><a data-toggle="tooltip" data-placement="top" title="View Details">View Details</a></span>
+                                                        </div>
+                                                        <div class="ps-product__container">
+                                                            <div class="ps-product__content">
+                                                                <a class="ps-product__title" href="/product/4245">Lion Breast Pump Set (1 Set Box)(5279-33) </a>
+                                                                <div class="ps-product__quantity"><p class="quantity_text">n/a</p></div>
+                                                                <div class="ps-product__price sale">
+                                                                    <strong>৳</strong> 460<del class="ml-2"><strong>৳</strong> 615</del>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="ps-porduct__add-cart"><p class="add-cart-text">ADD TO BAG</p></div>
+                                                                <div class="ps-porduct__add-cart__Hover">
+                                                                    <figure>
+                                                                        <div class="add-cart-inc-dec">
+                                                                            <button class="up"><i class="fa fa-plus btn-clr"></i></button><button class="down"><i class="fa fa-minus btn-clr"></i></button>
+                                                                            <input class="display_quantity" type="text" placeholder="0 ITEM COUNT" disabled="" />
+                                                                        </div>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                         
+                    <!-- End Most Discounted Products-->
+                                   
                             
                         </div>
                         <div></div>
